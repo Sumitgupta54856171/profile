@@ -8,7 +8,7 @@ function App(){
 return(<>
 
 
-  <div className="h-screen w-full bg-gradient-to-br from-gray-700 via-gray-900 to-black overflow-scroll ">
+  <div className="h-screen w-full bg-gradient-to-br from-gray-700 via-gray-900 to-black overflow-scroll text-white">
   <Navbar></Navbar>
    <Routes>
     <Route path='/' element={<Home/>}></Route>

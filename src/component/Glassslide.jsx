@@ -23,10 +23,10 @@ return (<>
  <div class="
         relative z-10  bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl shadow-lg  gap-4 text-center text-white
     ">
-            <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl border border-gray-200">
+            <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl border border-gray-200 ">
           
             <div
-              className="flex transition-transform duration-700 ease-in-out"
+              className="flex shadow-x1/30 transition-transform duration-700 ease-in-out"
               style={{ transform: `translateX(-${slide * 100}%)` }}
             >
               {images.map((image, index) => (
