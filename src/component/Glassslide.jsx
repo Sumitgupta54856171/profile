@@ -20,7 +20,7 @@ function Glassslide() {
 
       
 return (<>
- <div class="
+ <div className="
         relative z-10  bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl shadow-lg  gap-4 text-center text-white
     ">
             <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl border border-gray-200 ">

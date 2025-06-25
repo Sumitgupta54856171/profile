@@ -72,14 +72,14 @@ export default function SkillsList() {
       <h2 className="text-2xl font-bold mb-6 text-center">Technical Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((skillGroup, index) => (
-          <div key={index} className="bg-slate-700 rounded-lg p-4 shadow-lg">
+          <div key={index} className="bg-slate-700 rounded-lg p-4 shadow-lg shadow-cyan-500">
             <div className="flex items-center gap-2 mb-3">
               <div className="text-blue-400">
                 {skillGroup.icon}
               </div>
               <h3 className="text-lg font-semibold text-blue-300">{skillGroup.category}</h3>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 ">
               {skillGroup.items.map((skill, skillIndex) => (
                 <span 
                   key={skillIndex} 
