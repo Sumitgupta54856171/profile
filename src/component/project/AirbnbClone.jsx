@@ -52,8 +52,8 @@ function AirbnbClone() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-950 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 font-inter text-gray-200">
-      <div className="bg-gray-800 rounded-xl shadow-2xl overflow-hidden max-w-5xl w-full my-8 transform transition-all duration-500 hover:scale-105 border border-blue-700">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-slate-950 to-slate-900 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 font-inter text-gray-200">
+      <div className="bg-slate-900 rounded-xl shadow-2xl overflow-hidden max-w-5xl w-full my-8 transform transition-all duration-500 hover:scale-105 border border-slate-900">
         {/* Project Header and Image */}
         <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl border border-gray-200 ">
           

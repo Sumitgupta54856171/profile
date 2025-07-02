@@ -25,7 +25,7 @@ useEffect(()=>{
  <div>
 <div className='container py-20 mx-auto text-zinc-500 justify-center align-middle items-center flex flex-col '>
 <h1 className='text-5xl font-bold text-white'>Building bridges between design, development, Code and deployment</h1>
-<p className="text-gray-400 my-8 text-center text-sm dark:text-shadow-cyan-900">    {words.map((word, index) => (
+<p className="text-gray-800 my-8 text-center text-sm dark:text-shadow-cyan-900">    {words.map((word, index) => (
               <span
                 key={index}
                 className={`inline-block mr-2 transition-all duration-500 ease-in-out ${

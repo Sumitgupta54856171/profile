@@ -12,7 +12,7 @@ function App(){
 return(<>
 
 
-  <div className="h-screen w-full bg-gradient-to-br from-slate-700 via-gray-900 to-black overflow-scroll text-white">
+  <div className="h-screen w-full bg-gradient-to-br from-slate-100 via-slate-950 to-slate-900 overflow-scroll text-white">
   <Navbar></Navbar>
    <Routes>
     <Route path='/' element={<Home/>}></Route>

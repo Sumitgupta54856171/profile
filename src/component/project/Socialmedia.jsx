@@ -2,7 +2,7 @@ import { useEffect,useState } from "react";
 function Socialmedia() {
           const [slide,setSlide]=useState([])
       const images = [
-          { src: '../public/Socialmedia/socialmedia1.png', alt: 'A vibrant orange background with text "Slide 1"' },
+          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia1.png', alt: 'A vibrant orange background with text "Slide 1"` },
           { src: '../public/Socialmedia/socialmedia2.png', alt: 'A bright green background with text "Slide 2"' },
           { src: '../public/Socialmedia/socialmedia3.png', alt: 'A deep blue background with text "Slide 3"' },
           { src: '../public/Socialmedia/socialmedia4.png', alt: 'A vivid pink background with text "Slide 4"' },

@@ -4,7 +4,7 @@ return(
     <>
      <section class="relative bottom-0 w-full">
             <div class="relative p-1 rounded-xl bg-gradient-to-r from-teal-900 via-slate-900 to-cyan-900 animate-border-shine">
-                <div class="rounded-xl bg-gradient-to-r from-blue-500 via-yellow-500 to-cyan-800 p-6 text-white ">
+                <div class="rounded-xl bg-gradient-to-r from-blue-500 via-yellow-500 to-cyan-500 p-6 text-white ">
                   <h2 class="text-xl font-bold text-center">Sumit Gupta</h2>
                   <p class="text-center "></p>
                 </div>
