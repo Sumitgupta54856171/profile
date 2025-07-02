@@ -8,6 +8,7 @@ import Stockmarke from './component/project/Stockemarket';
 import Project from './Project';
 import { useState } from 'react';
 import Gallery from './component/Gallery';
+import Coms from './component/Coms';
 function App() {
   const [whiteBg, setWhiteBg] = useState(false);
   const [currentPage, setPage] = useState('home');
@@ -20,6 +21,7 @@ function App() {
   else if (currentPage === 'airbnb') pageContent = <AirbnbClone setPage={setPage} whiteBg={whiteBg} />;
   else if (currentPage === 'stockmarket') pageContent = <Stockmarke setPage={setPage} whiteBg={whiteBg} />;
   else if (currentPage === 'socialmedia') pageContent = <Socialmedia setPage={setPage} whiteBg={whiteBg} />;
+else if (currentPage === 'ecommerce') pageContent = <Coms setPage={setPage} whiteBg={whiteBg} />;
   else pageContent = <Home setPage={setPage} whiteBg={whiteBg} />;
 
   return (

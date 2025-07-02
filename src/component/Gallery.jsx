@@ -20,13 +20,19 @@ const images = [
   '/stockmarket/stockmarket2.png',
   '/stockmarket/stockmarket3.png',
   '/stockmarket/stockmarket4.png',
+  '/Nevstore/N1.png',
+  '/Nevstore/N2.png',
+  '/Nevstore/N3.png',
+  '/Nevstore/N4.png',
+  '/Nevstore/N5.png',
+  '/Nevstore/N6.png',
 ];
 
 function Gallery() {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center bg-white py-6">
+    <div className="w-full min-h-screen sm:flex  flex flex-col items-center bg-white py-6">
       <h2 className="text-2xl font-bold mb-4">Photo Gallery</h2>
-      <div className="grid grid-cols-3 gap-2 w-full max-w-xs sm:max-w-md md:max-w-lg">
+      <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:flex-row w-full max-w-xs sm:max-w-md md:max-w-lg">
         {images.map((src, idx) => (
           <div key={idx} className="overflow-hidden rounded-lg shadow-md">
             <img

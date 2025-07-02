@@ -3,6 +3,7 @@ import { useEffect,useState } from "react";
 import Stockmarket from "./Stockmarket";
 import Socilamedia from "./Socilamedia";
 import Footer from "../Footer";
+import Coms from "./Coms";
 function Home({ setPage, whiteBg }){
     const [visibleWords, setVisibleWords] = useState(0);
 const fullword= 'I am Sumit,As a Full Stack Developer, I build bridges between design, development, and deployment to deliver seamless digital solutions.I bring ideas to life by connecting design, development, and deployment—ensuring smooth, end-to-end digital experiences'
@@ -41,6 +42,7 @@ useEffect(()=>{
        <div className="m-20"><Glassslide setPage={setPage} whiteBg={whiteBg}/></div>
        <section className="m-20"><Stockmarket setPage={setPage} whiteBg={whiteBg}/></section>
        <section className="m-20"><Socilamedia setPage={setPage} whiteBg={whiteBg}/></section>
+       <section className="m-20"><Coms setPage={setPage} whiteBg={whiteBg}/></section>
        <Footer whiteBg={whiteBg}></Footer>
        
        </div>
