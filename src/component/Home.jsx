@@ -1,6 +1,9 @@
 import Glassslide from "./Glassslide";
 import { useEffect,useState } from "react";
 import {Link} from "react-router-dom";
+import Stockmarket from "./Stockmarket";
+import Socilamedia from "./Socilamedia";
+import Footer from "../Footer";
 function Home(){
     const [visibleWords, setVisibleWords] = useState(0);
 const fullword= 'I am Sumit,As a Full Stack Developer, I build bridges between design, development, and deployment to deliver seamless digital solutions.I bring ideas to life by connecting design, development, and deployment—ensuring smooth, end-to-end digital experiences'
@@ -21,8 +24,8 @@ useEffect(()=>{
     <div className="grid grid-rows-1 auto text-gray-800 justify-center align-middle items-center">
  <div>
 <div className='container py-20 mx-auto text-zinc-500 justify-center align-middle items-center flex flex-col '>
-<h1 className='text-3xl font-bold text-white'>Bridging the gap between design, development, Code and deployment</h1>
-<p className="text-white my-8 text-center">    {words.map((word, index) => (
+<h1 className='text-5xl font-bold text-white'>Building bridges between design, development, Code and deployment</h1>
+<p className="text-gray-400 my-8 text-center text-sm dark:text-shadow-cyan-900">    {words.map((word, index) => (
               <span
                 key={index}
                 className={`inline-block mr-2 transition-all duration-500 ease-in-out ${
@@ -39,6 +42,10 @@ useEffect(()=>{
        
       </div>
        <div className="m-20"><Glassslide/></div>
+       <section className="m-20"><Stockmarket/></section>
+       <section className="m-20"><Socilamedia/></section>
+       <Footer></Footer>
+       
        </div>
     </>)
 }

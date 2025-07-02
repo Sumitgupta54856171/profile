@@ -1,6 +1,23 @@
-import React from 'react';
-
+import { useEffect,useState } from "react";
 function Socialmedia() {
+          const [slide,setSlide]=useState([])
+      const images = [
+          { src: '../public/Socialmedia/socialmedia1.png', alt: 'A vibrant orange background with text "Slide 1"' },
+          { src: '../public/Socialmedia/socialmedia2.png', alt: 'A bright green background with text "Slide 2"' },
+          { src: '../public/Socialmedia/socialmedia3.png', alt: 'A deep blue background with text "Slide 3"' },
+          { src: '../public/Socialmedia/socialmedia4.png', alt: 'A vivid pink background with text "Slide 4"' },
+          { src: '../public/Socialmedia/socialmedia5.png', alt: 'A vivid pink background with text "Slide 5"' },
+          { src: '../public/Socialmedia/socialmedia6.png', alt: 'A vivid pink background with text "Slide 6"' }
+        ];
+        useEffect(()=>{
+          const time = setInterval(()=>{
+              setSlide((prevslide)=>(prevslide+1)%images.length)
+          },3000)
+        
+        return ()=>{
+          clearInterval(time)
+        }
+      },[])
   const project = {
     title: "Social Media Web App",
     image: "https://placehold.co/600x400/1F2937/F9FAFB?text=Social+Media+App", // Placeholder image, updated for dark theme
@@ -38,18 +55,26 @@ function Socialmedia() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-950 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 font-inter text-gray-200">
       <div className="bg-gray-800 rounded-xl shadow-2xl overflow-hidden max-w-5xl w-full my-8 transform transition-all duration-500 hover:scale-105 border border-blue-700">
         {/* Project Header and Image */}
-        <div className="relative">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-64 object-cover rounded-t-xl"
-            onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x400/1F2937/F9FAFB?text=Image+Not+Found"; }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80 rounded-t-xl"></div>
-          <h1 className="absolute bottom-4 left-4 text-4xl font-extrabold text-white tracking-tight leading-tight drop-shadow-lg">
-            {project.title}
-          </h1>
-        </div>
+        <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl border border-gray-200 ">
+          
+            <div
+              className="flex shadow-x1/30 transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${slide * 100}%)` }}
+            >
+              {images.map((image, index) => (
+          
+                <div key={index} className="w-full flex-shrink-0">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-auto object-cover rounded-xl"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+            </div>
+          </div>
 
         {/* Short Description */}
         <div className="p-8 pb-4">

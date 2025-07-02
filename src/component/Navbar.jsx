@@ -12,7 +12,7 @@ return(<>
                 <Link to="/profile" className="flex flex-row gap-1 hover:text-white/70 hover:bg-white/10 hover:border hover:rounded-2xl text-white hover:px-2"><p>Profile</p> <UserIcon size={20}/></Link>
             </li>
             <li>
-                <Link to="work" className="flex flex-row gap-1 hover:text-white/70 hover:bg-white/10 hover:border hover:rounded-2xl text-white hover:px-2"><p>Project</p><ProjectorIcon size={20}/></Link>
+                <Link to="/project" className="flex flex-row gap-1 hover:text-white/70 hover:bg-white/10 hover:border hover:rounded-2xl text-white hover:px-2"><p>Project</p><ProjectorIcon size={20}/></Link>
             </li>
             <li>
                 <Link to="/blog" className="flex flex-row gap-1 hover:text-white/70 hover:bg-white/10 hover:border hover:rounded-2xl text-white hover:px-2"><p>Blog</p><BookLock size={20}/></Link>
