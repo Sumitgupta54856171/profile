@@ -1,13 +1,13 @@
 import { useEffect,useState } from "react";
-function Socialmedia() {
+function Socialmedia({ setPage, whiteBg = false }) {
           const [slide,setSlide]=useState([])
       const images = [
-          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia1.png', alt: 'A vibrant orange background with text "Slide 1"` },
-          { src: '../public/Socialmedia/socialmedia2.png', alt: 'A bright green background with text "Slide 2"' },
-          { src: '../public/Socialmedia/socialmedia3.png', alt: 'A deep blue background with text "Slide 3"' },
-          { src: '../public/Socialmedia/socialmedia4.png', alt: 'A vivid pink background with text "Slide 4"' },
-          { src: '../public/Socialmedia/socialmedia5.png', alt: 'A vivid pink background with text "Slide 5"' },
-          { src: '../public/Socialmedia/socialmedia6.png', alt: 'A vivid pink background with text "Slide 6"' }
+          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia1.png`, alt: 'A vibrant orange background with text "Slide 1"' },
+          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia2.png`, alt: 'A bright green background with text "Slide 2"' },
+          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia3.png`, alt: 'A deep blue background with text "Slide 3"' },
+          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia4.png`, alt: 'A vivid pink background with text "Slide 4"' },
+          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia5.png`, alt: 'A vivid pink background with text "Slide 5"' },
+          { src: `${import.meta.env.BASE_URL}Socialmedia/socialmedia6.png`, alt: 'A vivid pink background with text "Slide 6"' }
         ];
         useEffect(()=>{
           const time = setInterval(()=>{
@@ -77,15 +77,15 @@ function Socialmedia() {
           </div>
 
         {/* Short Description */}
-        <div className="p-8 pb-4">
-          <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+        <div className={`p-8 pb-4 {whiteBg ? 'bg-white text-black' : ''}`}>
+          <p className="text-xl ${whiteBg ? 'text-black' : 'text-gray-300'} mb-6 leading-relaxed">
             {project.shortDescription}
           </p>
           <a
             href={project.detailLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition transform hover:-translate-y-1 active:scale-95 duration-200"
+            className="inline-flex items-center bg-blue-600 ${whiteBg ? 'text-black' : 'text-white'} font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition transform hover:-translate-y-1 active:scale-95 duration-200"
           >
             View Project on GitHub
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -98,8 +98,8 @@ function Socialmedia() {
         <div className="p-8 pt-4 space-y-10">
           {/* Key Features */}
           <div className="bg-gray-700 p-6 rounded-lg shadow-inner border border-gray-600">
-            <h2 className="text-2xl font-bold text-white mb-4">Key Features</h2>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
+            <h2 className="text-2xl font-bold ${whiteBg ? 'text-black' : 'text-white'} mb-4">Key Features</h2>
+            <ul className="list-disc list-inside ${whiteBg ? 'text-black' : 'text-gray-300'} space-y-2">
               {project.keyFeatures.map((feature, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-blue-400 mr-2">&bull;</span>
@@ -111,8 +111,8 @@ function Socialmedia() {
 
           {/* Technologies Used */}
           <div className="bg-gray-700 p-6 rounded-lg shadow-inner border border-gray-600">
-            <h2 className="text-2xl font-bold text-white mb-4">Technologies Used</h2>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
+            <h2 className="text-2xl font-bold ${whiteBg ? 'text-black' : 'text-white'} mb-4">Technologies Used</h2>
+            <ul className="list-disc list-inside ${whiteBg ? 'text-black' : 'text-gray-300'} space-y-2">
               {project.technologiesUsed.map((tech, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-blue-400 mr-2">&bull;</span>
@@ -124,8 +124,8 @@ function Socialmedia() {
 
           {/* Challenges and Learnings */}
           <div className="bg-gray-700 p-6 rounded-lg shadow-inner border border-gray-600">
-            <h2 className="text-2xl font-bold text-white mb-4">Challenges and Learnings</h2>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
+            <h2 className="text-2xl font-bold ${whiteBg ? 'text-black' : 'text-white'} mb-4">Challenges and Learnings</h2>
+            <ul className="list-disc list-inside ${whiteBg ? 'text-black' : 'text-gray-300'} space-y-2">
               {project.challengesAndLearnings.map((challenge, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-blue-400 mr-2">&bull;</span>
@@ -137,8 +137,8 @@ function Socialmedia() {
 
           {/* Outcome */}
           <div className="bg-gray-700 p-6 rounded-lg shadow-inner border border-gray-600">
-            <h2 className="text-2xl font-bold text-white mb-4">Outcome</h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <h2 className="text-2xl font-bold ${whiteBg ? 'text-black' : 'text-white'} mb-4">Outcome</h2>
+            <p className="text-lg ${whiteBg ? 'text-black' : 'text-gray-300'} leading-relaxed">
               {project.outcome}
             </p>
           </div>

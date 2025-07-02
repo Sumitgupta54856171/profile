@@ -1,10 +1,9 @@
 import Glassslide from "./Glassslide";
 import { useEffect,useState } from "react";
-import {Link} from "react-router-dom";
 import Stockmarket from "./Stockmarket";
 import Socilamedia from "./Socilamedia";
 import Footer from "../Footer";
-function Home(){
+function Home({ setPage, whiteBg }){
     const [visibleWords, setVisibleWords] = useState(0);
 const fullword= 'I am Sumit,As a Full Stack Developer, I build bridges between design, development, and deployment to deliver seamless digital solutions.I bring ideas to life by connecting design, development, and deployment—ensuring smooth, end-to-end digital experiences'
 const words = fullword.split(' ')
@@ -21,11 +20,10 @@ useEffect(()=>{
 },[])
 
     return(<>
-    <div className="grid grid-rows-1 auto text-gray-800 justify-center align-middle items-center">
- <div>
-<div className='container py-20 mx-auto text-zinc-500 justify-center align-middle items-center flex flex-col '>
-<h1 className='text-5xl font-bold text-white'>Building bridges between design, development, Code and deployment</h1>
-<p className="text-gray-800 my-8 text-center text-sm dark:text-shadow-cyan-900">    {words.map((word, index) => (
+    <div className={`flex flex-col items-center justify-center min-h-screen w-full ${whiteBg ? 'bg-white text-black' : ''}`}>
+      <div className="flex flex-col items-center justify-center mt-32">
+        <h1 className={`text-5xl font-bold mb-6 ${whiteBg ? 'text-black' : 'text-white'}`}>Building bridges between design, development, Code and deployment</h1>
+<p className={`text-sm text-center ${whiteBg ? 'text-black' : 'text-white'}`}>    {words.map((word, index) => (
               <span
                 key={index}
                 className={`inline-block mr-2 transition-all duration-500 ease-in-out ${
@@ -38,13 +36,12 @@ useEffect(()=>{
               </span>
             ))}</p>
 </div>
-      <Link to="/profile" className="flex flex-row gap-1 hover:text-white/70 hover:bg-white/10 hover:border hover:rounded-2xl hover:px-2 text-white w-60 h-12 items-center justify-center bg-blend-overlay backdrop-blur-sm bg-white/10 rounded-3xl text-center"><p>About my self</p></Link>
+      <button onClick={() => setPage('profile')} className={`flex flex-row gap-1 w-60 h-12 items-center justify-center rounded-3xl text-center transition-colors duration-300 ${whiteBg ? 'bg-slate-100 text-black hover:bg-slate-200' : 'text-white bg-white/10 hover:text-white/70 hover:bg-white/10 hover:border hover:rounded-2xl hover:px-2 bg-blend-overlay backdrop-blur-sm'}`}><p>About my self</p></button>
        
-      </div>
-       <div className="m-20"><Glassslide/></div>
-       <section className="m-20"><Stockmarket/></section>
-       <section className="m-20"><Socilamedia/></section>
-       <Footer></Footer>
+       <div className="m-20"><Glassslide setPage={setPage} whiteBg={whiteBg}/></div>
+       <section className="m-20"><Stockmarket setPage={setPage} whiteBg={whiteBg}/></section>
+       <section className="m-20"><Socilamedia setPage={setPage} whiteBg={whiteBg}/></section>
+       <Footer whiteBg={whiteBg}></Footer>
        
        </div>
     </>)
