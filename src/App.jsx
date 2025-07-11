@@ -25,19 +25,13 @@ else if (currentPage === 'ecommerce') pageContent = <Coms setPage={setPage} whit
   else pageContent = <Home setPage={setPage} whiteBg={whiteBg} />;
 
   return (
-    <div className={
-      whiteBg
-        ? 'min-h-screen w-full bg-white overflow-scroll text-black transition-colors duration-300'
-        : 'h-screen w-full bg-gradient-to-br from-slate-100 via-slate-950 to-slate-900 overflow-scroll text-white transition-colors duration-300'
-    }>
-      <button
-        className="fixed bottom-4 right-4 z-50 px-4 py-2 rounded-full shadow-lg bg-slate-800 text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        onClick={() => setWhiteBg((v) => !v)}
-      >
-        {whiteBg ? 'Back' : 'White'}
-      </button>
+    <div className="{whiteBg? min-h-screen w-full bg-white overflow-scroll sm:overflow-scroll text-black transition-colors duration-3 
+        : h-screen w-full bg-gradient-to-b from-slate-700 via-slate-950 to-slate-900 overflow-scroll sm:overflow-scroll text-white transition-colors duration-300
+   }">
+   
       <Navbar setPage={setPage} currentPage={currentPage} whiteBg={whiteBg} />
       {pageContent}
+      
     </div>
   );
 }

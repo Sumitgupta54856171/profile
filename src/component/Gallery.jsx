@@ -30,11 +30,11 @@ const images = [
 
 function Gallery() {
   return (
-    <div className="w-full min-h-screen sm:flex  flex flex-col items-center bg-white py-6">
+    <div className="w-full min-h-screen sm:flex  flex flex-col  py-6 bg-gradient-to-b from-slate-700 to-slate-950 items-center">
       <h2 className="text-2xl font-bold mb-4">Photo Gallery</h2>
-      <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:flex-row w-full max-w-xs sm:max-w-md md:max-w-lg">
+      <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:flex-row w-full max-w-xs sm:max-w-md md:max-w-lg relative top-30">
         {images.map((src, idx) => (
-          <div key={idx} className="overflow-hidden rounded-lg shadow-md">
+          <div key={idx} className="overflow-hidden rounded-lg shadow-md w-full">
             <img
               src={import.meta.env.BASE_URL + src}
               alt={`Gallery image ${idx + 1}`}

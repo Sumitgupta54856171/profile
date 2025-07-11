@@ -19,43 +19,47 @@ function Stockmarket({ setPage, whiteBg = false }) {
     })
 
       
-return (<>
- <div className={`p-8 pb-4 ${whiteBg ? 'bg-white text-black' : ''} relative z-10  bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl shadow-lg  gap-4 text-center {whiteBg ? 'text-black' : 'text-white'} grid grid-rows-6`}>
-            <div className={`relative  max-w-4xl mx-auto rounded-xl shadow-2xl border border-white/30 overflow-hidden row-span-5 ${whiteBg ? 'bg-white text-black' : ''}`}>
-          
-            <div
-              className="flex shadow-x1/30 transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${slide * 100}%)` }}
-            >
-              {images.map((image, index) => (
-          
-                <div key={index} className="w-full flex-shrink-0">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-auto object-cover rounded-xl"
-                  />
-                </div>
-              ))}
+return (
+    <div className={`p-4 md:p-6 rounded-xl shadow-lg flex flex-col gap-4 ${whiteBg ? 'bg-white text-black' : 'text-white'}`}>
+      {/* Image Carousel */}
+      <div className="max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${slide * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <div key={index} className="w-full flex-shrink-0">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-auto object-cover"
+              />
             </div>
-        
-          </div>
- <section className="relative">
-<span className=" absolute left-0 bottom-0  m-12 h-10 w-50 rounded-full">
-<span className="{whiteBg ? 'text-black' : 'text-white'} text-lg font-bold">
-  Building Once Stock Market System
-</span>
-</span>
-<span className=" absolute right-0 bottom-0   h-10  rounded-full w-140 m-12 flex flex-col gap-2">
-<span className="{whiteBg ? 'text-black' : 'text-white'} text-xs font-bold">
-  Development of a flexible and scalable stock market system with a user-friendly interface and secure payment processing. using Next.js, MongoDB, Mongoose, JWT,Ai-chatbot,Tailwindcss.
-</span>
-<button onClick={() => setPage('stockmarket')} className="text-cyan-600 text-xs font-bold hover:text-cyan-500 hover:underline">view project</button>
-</span>
- </section>
+          ))}
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <section className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="flex-1">
+          <h3 className={`text-lg font-bold ${whiteBg ? 'text-gray-900' : 'text-white'}`}>
+            Building Once Stock Market System
+          </h3>
+        </div>
+        <div className="flex-1 flex flex-col gap-2 items-start md:items-end">
+          <p className={`text-xs font-semibold text-left md:text-right ${whiteBg ? 'text-gray-700' : 'text-gray-200'}`}>
+            Development of a flexible and scalable stock market system with a user-friendly interface and secure payment processing. using Next.js, MongoDB, Mongoose, JWT,Ai-chatbot,Tailwindcss.
+          </p>
+          <button 
+            onClick={() => setPage('stockmarket')} 
+            className="text-cyan-500 text-sm font-bold hover:text-cyan-400 hover:underline self-start md:self-end"
+          >
+            View Project
+          </button>
+        </div>
+      </section>
     </div>
-    
-</>)
+  );
    
     
 }

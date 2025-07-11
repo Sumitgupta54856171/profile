@@ -10,12 +10,15 @@ return(
                 </div>
                 <span class="text-center ${whiteBg ? 'text-black' : 'text-white'} text-sm relative bottom-0 left-0"
                 >© 2025/SumitGupta/protfolio.</span>
-                <span class=" ${whiteBg ? 'text-black' : 'text-white'} text-sm static right-0 bottom-0 flex flex-row gap-2 ">
+                
+              </div>
+            </section>
+           <section className="absolute right-0 bottom-0 flex flex-row gap-2 ">
+           <span class=" ${whiteBg ? 'text-black' : 'text-white'} text-sm flex flex-row gap-2 ">
                   <a href="https://github.com/Sumitgupta54856171" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/m_outlined/512/github.png"className="size-8"></img></a>
                   <a href="https://www.linkedin.com/in/sumitgupta54856171/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios11/512/linkedin.png" className="size-8"></img></a>
                 </span>
-              </div>
-            </section>
+           </section>
     </>
 )
 }

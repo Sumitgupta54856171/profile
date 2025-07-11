@@ -2,8 +2,8 @@ import {BookLock, GalleryThumbnails, HomeIcon, ProjectorIcon, UserIcon} from 'lu
 
 function Navbar({ setPage, currentPage, whiteBg }) {
   return (
-    <nav className={`w-full px-2 py-2 fixed top-0 left-0 z-50 {whiteBg ? 'bg-white text-black' : 'bg-slate-700/90 text-white'} transition-colors duration-300`}> 
-  <ul className="flex flex-col sm:flex-row items-center sm:justify-center gap-2 sm:gap-5 bg-slate-700/80 sm:bg-slate-700/60 backdrop-blur-md px-2 sm:px-4 py-2 rounded-xl shadow-lg border border-white/10 text-sm sm:text-xs shadow-cyan-500/50 overflow-x-auto">
+    <nav className={` flex w-full px-2 sm:px-3 py-2 fixed top-2 sm:top-4 justify-center z-50 text-black  {whiteBg ? 'bg-white text-black' : 'bg-slate-700/90 text-white'} transition-colors duration-300 `}> 
+  <ul className="flex flex-row  items-center sm:justify-center gap-2 sm:gap-5 bg-slate-700/80 sm:bg-slate-700/60 backdrop-blur-md px-2 sm:px-4 py-2 rounded-4xl shadow-lg border border-white/10 text-sm sm:text-xs shadow-cyan-500/50 overflow-x-auto">
     <li className="w-full sm:w-auto">
       <button
         onClick={() => setPage('home')}

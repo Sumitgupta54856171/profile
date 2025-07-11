@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-function Coms({ setPage, whiteBg = false }) {
+function Coms({ setPage }) {
    
           const [slide,setSlide]=useState([])
     const images = [
@@ -21,46 +21,47 @@ function Coms({ setPage, whiteBg = false }) {
     },[])
 
       
-return (<>
- <div className="
-        relative z-10  bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl shadow-lg  gap-4 text-center ${whiteBg ? 'text-black' : 'text-white'}
- grid grid-rows-6">
-            <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl border border-gray-200 row-span-5">
-          
-            <div
-              className="flex shadow-x1/30 transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${slide * 100}%)` }}
-            >
-              {images.map((image, index) => (
-          
-                <div key={index} className="w-full flex-shrink-0">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-auto object-cover rounded-xl"
-                  />
-                </div>
-              ))}
+  return (
+    <div className={`p-4 md:p-6 rounded-xl shadow-lg flex flex-col gap-4 `}>
+      {/* Image Carousel */}
+      <div className="max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${slide * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <div key={index} className="w-full flex-shrink-0">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-auto object-cover"
+              />
             </div>
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-            </div>
-          </div>
-          <section className="relative">
-<span className=" absolute left-0 bottom-0  m-12 h-10 w-50 rounded-full">
-<span className="${whiteBg ? 'text-black' : 'text-white'} text-lg font-bold">
-  Building Once E-commerce System
-</span>
-</span>
-<span className=" absolute right-0 bottom-0   h-10  rounded-full w-140 m-12 flex flex-col gap-2">
-<span className={`text-xs font-bold {whiteBg ? 'text-black' : 'text-white'}`}>
-  Development of a flexible and scalable E-commerce system with a user-friendly interface and secure payment processing. using Reactjs,Nodejs, MongoDB, Mongoose, JWT,Ai-chatbot,Tailwindcss,Socket.io,Rest API.
-</span>
-<button onClick={() => setPage('ecommerce')} className="text-cyan-600 text-xs font-bold hover:text-cyan-500 hover:underline">view project</button>
-</span>
- </section>
+          ))}
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <section className="p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-white/20 text-white backdrop-blur-lg border border-white/30 rounded-2xl">
+        <div className="flex-1">
+          <h3 className={`text-lg font-bold text-white`}>
+            Building Once E-commerce System
+          </h3>
+        </div>
+        <div className="flex-1 flex flex-col gap-2 items-start md:items-end">
+          <p className={`text-xs font-semibold text-left md:text-right text-gray-200`}>
+            Development of a flexible and scalable E-commerce system with a user-friendly interface and secure payment processing. using Reactjs,Nodejs, MongoDB, Mongoose, JWT,Ai-chatbot,Tailwindcss,Socket.io,Rest API.
+          </p>
+          <button 
+            onClick={() => setPage('ecommerce')} 
+            className="text-cyan-500 text-sm font-bold hover:text-cyan-400 hover:underline self-start md:self-end"
+          >
+            View Project
+          </button>
+        </div>
+      </section>
     </div>
-    
-</>)
+  );
    
     
 }
