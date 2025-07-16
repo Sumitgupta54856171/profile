@@ -23,7 +23,8 @@ useEffect(()=>{
     return(<>
     <div className={`flex flex-col items-center justify-center min-h-screen w-full`}>
       <div className="flex flex-col items-center justify-center mt-32">
-        <h1 className={`text-5xl font-bold mb-6 relative sm:right-50 m-4 p-10 md:right-0 md:text-wrap ${whiteBg ? 'text-black' : 'text-white'}`}>Sumit Gupta | Full Stack Developer && Designer,Backend Developer </h1>
+        <h1 className={`text-5xl font-bold mb-6 relative sm:right-50 m-4 p-10 md:right-0 md:text-wrap ${whiteBg ? 'text-black' : 'text-white'}`}>Sumit Gupta | Full Stack Developer&& Building Scalable Web Solutions
+</h1>
 <p className={`text-sm text-center  relative sm:right-50 m-4 p-10 md:right-40 md:text-wrap ${whiteBg ? 'text-black' : 'text-white'}`}>    {words.map((word, index) => (
               <span
                 key={index}
